@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
     <script src="event.js" defer></script>
 </head>
+
 <body>
     <h1>DOM</h1>
     <button id="clicked">Click me</button>
 
     <button id="one">click ME1 </button>
-     <button id="two">click ME2 </button>
-      <button id="three">click ME3 </button>
+    <button id="two">click ME2 </button>
+    <button id="three">click ME3 </button>
+    <!-- here in id only first one take by queryselector rest button id 2 and 3 will not reflect blue even though using forEach loop so -->
+    <!-- use class then querySelectorAll() then forEach to apply all button classes  -->
+    <!-- Use class="clicked" instead of id="clicked" on multiple elements -->
+    <button class="clicked" id="btn-1">Button 1</button>
+    <button class="clicked" id="btn-2">Button 2</button>
+    <button class="clicked" id="btn-3">Button 3</button>
 </body>
+
 </html>

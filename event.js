@@ -22,3 +22,33 @@ buttons.forEach((button) => {
     alert(button.id);
   });
 });
+
+
+// ### for classes 
+// 1. Use querySelectorAll and a class selector (.clicked) to get ALL matching buttons
+const buttonsClass = document.querySelectorAll(".clicked");
+
+// 2. Loop through every button to attach the behavior
+buttons.forEach((button) => {
+  
+  // Log when clicked
+  button.addEventListener("click", () => {
+    console.log('clicked', button.id);
+  });
+
+  // Log the target element
+  button.addEventListener("click", function(e){
+    console.log(e.target);
+  });
+
+  // Change background to blue
+  button.addEventListener("click", function (e) {
+    e.target.style.background = "blue";
+  });
+
+  // Show alert with the button's ID
+  button.addEventListener("click", () => {
+    alert(button.id);
+  });
+  
+});
