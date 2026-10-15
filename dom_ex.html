@@ -2,6 +2,15 @@
 <html lang="en-US">
 
 <head>
+    <style>
+  .highlight {
+    color: white;
+    background-color: black;
+    padding: 10px;
+    width: 250px;
+    text-align: center;
+  }
+</style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple DOM example</title>
@@ -13,8 +22,8 @@
             alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
         <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
     </section>
-
-
+    <!-- document below link -->
+    <!-- https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting#doing_some_basic_dom_manipulation -->
     <script>
         const link = document.querySelector("a");
         link.textContent = "Mozilla Developer Network";
@@ -36,30 +45,43 @@
         const linkPara = document.querySelector('p');
         linkPara.appendChild(text);  //it will append to above text where createTextNode invisible memory msg display on screen by appendChild(text)
 
-        
+
         //##Moving and removing elements
 
         //it will move to top in section below paragraph from top to bottom
-       sect.appendChild(linkPara); //just move to down
+        sect.appendChild(linkPara); //just move to down
 
-     //   sect.removeChild(linkPara);  //it will remove or delete para with link
+        //   sect.removeChild(linkPara);  //it will remove or delete para with link
 
-      //  linkPara.remove();   //you want to remove a node based only on a reference to itself
-    //but above remove() is not supported old browser so used down 
+        //  linkPara.remove();   //you want to remove a node based only on a reference to itself
+        //but above remove() is not supported old browser so used down 
 
-    linkPara.parentNode.removeChild(linkPara); //remove with support old browser too
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+     //   linkPara.parentNode.removeChild(linkPara); //remove with support old browser too
+
+        //##Manipulating styles
+
+        //inline css dom
+        // para.style.color = "white";
+        // para.style.backgroundColor = "black";
+        // para.style.padding = "10px";
+        // para.style.width = "250px";
+        // para.style.textAlign = "center";
+
+
+
+        // linkPara.style.color ="green";
+        // linkPara.style.backgroundColor="black"
+        // linkPara.style.padding = "10px";
+        // linkPara.style.width = "250px";
+        // linkPara.style.textAlign = "center";
+
+
+        //inline css dom under <head> tag style added with .highlight
+        para.classList.add("highlight");
+        linkPara.classList.add("highlight");
+
+
+
     </script>
 </body>
 
