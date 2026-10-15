@@ -19,16 +19,22 @@
         const link = document.querySelector("a");
         link.textContent = "Mozilla Developer Network";
         link.href = "https://developer.mozilla.org";
-//here just manipulate based on link anchor name text as well as url from only mozilla.org to above developer.mozilla.org that what changed or manipulate
+        //here just manipulate based on link anchor name text as well as url from only mozilla.org to above developer.mozilla.org that what changed or manipulate
 
-// now with section above element need to changes
-//adding paragraph p element creating inside section element 
-    const sect =document.querySelector("section");
-    const para = document.createElement("p");
-    para.textContent = "We hope you enjoyed the ride.";
-    sect.appendChild(para);
+        // now with section above element need to changes
+        //adding paragraph p element creating inside section element 
+        const sect = document.querySelector("section");
+        const para = document.createElement("p");
+        para.textContent = "We hope you enjoyed the ride.";
+        sect.appendChild(para);
 
-    //
+        //here createTextNode in Dom will create invisible memory
+        const text = document.createTextNode(
+            " — the premier source for web development knowledge.",
+        );
+        //then here it will link to invisible memory to by reference text and fetch or visible on screen
+        const linkPara = document.querySelector('p');
+        linkPara.appendChild(text);  //it will append to above text where createTextNode invisible memory msg display on screen by appendChild(text)
 
     </script>
 </body>
