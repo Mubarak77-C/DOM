@@ -36,6 +36,30 @@
         const linkPara = document.querySelector('p');
         linkPara.appendChild(text);  //it will append to above text where createTextNode invisible memory msg display on screen by appendChild(text)
 
+        
+        //##Moving and removing elements
+
+        //it will move to top in section below paragraph from top to bottom
+       sect.appendChild(linkPara); //just move to down
+
+     //   sect.removeChild(linkPara);  //it will remove or delete para with link
+
+      //  linkPara.remove();   //you want to remove a node based only on a reference to itself
+    //but above remove() is not supported old browser so used down 
+
+    linkPara.parentNode.removeChild(linkPara); //remove with support old browser too
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     </script>
 </body>
 
